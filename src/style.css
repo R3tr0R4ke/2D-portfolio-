@@ -1,0 +1,66 @@
+.road {
+    position: absolute;
+    background: url(png/strada.png) repeat;
+}
+
+.trees {
+    position: absolute;
+    background: url(png/tree.png) repeat 0 0;
+}
+
+#wrapper * {
+    position: absolute;
+}
+
+.sea {
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background: url(png/sea.png) repeat 0 0;
+    -webkit-animation: seamove 6s linear infinite;
+    /* Webkit support */
+    -moz-animation: seamove 6s linear infinite;
+    /* Firefox support */
+    animation: seamove 6s linear infinite;
+    /* Future browsers support */
+}
+
+/* Webkit support */
+@-webkit-keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Firefox support */
+@-keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;	
+	}
+}
+
+/* Future browsers support */

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>R3troR4k3</title>
+    <meta name="description" content="R3tr0R4k3 - Back-end developer">
+    <meta name="keywords"
+        content="Rake, Federico, Sgaramella, BackEnd engineer, MySql, Java, JDBC, Web designer, Web developer, CSS, HTML, jQuery, PHP, Front End Developer, Back end developer, CSS3, HTML5, Javascript, Angular">
+
+    <!-- Styles -->
+    <link href="http://fonts.googleapis.com/css?family=Lekton" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Molengo" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="reset.css" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+
+    <!-- Scripts -->
+    <script src="scripts/jquery-1.6.3.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery.spritely-0.6.js" type="text/javascript"></script>
+    <script src="scripts/data.js" type="text/javascript"></script>
+    <script src="scripts/game.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#innerLoading .me').sprite({ fps: 9, no_of_frames: 3 }).spState(1);
+            var game = new Game();
+        });
+
+        function startGame() {
+            $('html, body').animate({ scrollTop: 0 });
+            $('#loadingGame').fadeOut('fast', function () {
+                $(this).remove();
+            })
+        }
+    </script>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-23746310-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</head>
+
+<body onload="startGame()">
+
+    <!-- Google +1 -->
+    <script type="text/javascript">
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+
+    <!-- Loader -->
+    <div id="loadingGame">
+        <div id="innerLoading">
+            <div class="me"></div>
+            <p>Attendi qualche secondo</p>
+            <span>Non scappare da qui...</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="clearfix">
+            <li><a class="current" href="#startCave">Home</a></li>
+            <li><a href="#aboutHouse">About Me</a></li>
+            <li><a href="#servicesHouse">Servizi e skill</a></li>
+            <li><a href="#portfolioHouse">Progetti Recenti</a></li>
+            <li><a href="#boat">Contatti</a></li>
+            <li class="last"><a href="#howToPlay">?</a></li>
+        </ul>
+    </nav>
+
+    <!-- Notifications Manager -->
+    <div id="notifications">
+        <div class="inner"></div><span class="close">x</span>
+    </div>
+
+    <div id="wrapper">
+
+        <!-- Info-->
+        <hgroup id="myInfo">
+            <h1>SGARAMELLA CESARE FEDERICO</h1>
+            <h2>Back-end Developer</h2>
+        </hgroup>
+
+        <!-- Start Text -->
+        <p id="startText">
+            <img src="images/keyboardArrows.png" alt="keyboard arrows" />
+            Inizia a navigare usando le<br /> frecce.
+        </p>
+
+        <!-- Start Cave -->
+        <div id="startCave" class="cave"></div>
+        <div id="startCaveHole" class="caveHole"></div>
+        <div id="startCaveHoleTrack" class="caveHoleTrack"></div>
+
+        <!-- Main Road -->
+        <div id="mainRoad" class="road"></div>
+        <div id="leftFence"></div>
+        <div id="rightFence"></div>
+
+        <!-- Me --> <!--ricorda di cambiare id-->
+        <div id="daniel"></div>
+
+        <!-- Stop Station 1 -->
+        <div id="aboutRoad" class="road side"></div>
+        <div id="aboutHouse" class="house">
+            <div class="door"></div>
+            <div class="lightbox">
+                <div class="inner about">
+                    <h2>About Me</h2>
+                    <img src="png/aboutImg.png" alt="Daniel Sternlicht" />
+                    <article>
+                        <p><strong>Hey avventuriero</strong>!</p>
+                        <p>
+                            Il mio nome è <strong>Sgaramella Cesare Federico</strong> sono uno Studente dell'Università
+                            di Bari Aldo Moro e sono <br /><strong>Back-end developer</strong> con una grande passione
+                            <br />per la Cybersecurity.
+                        </p>
+                        <p>
+                            Cerco sempre di espandere la mia cultura sul mondo informatico e nuove tecnologie in quanto
+                            li trovo interessanti come argomenti
+                        </p>
+                        <p>
+                            Questo portofolio è ispirato ai vecchi giochi Gamecube e l'idea originale è di Daniel
+                            Sternlicht, le tecnlogie usate sono<strong>JavaScript, HTML5 and CSS3</strong>.<br />Spero
+                            vi piaccia questa reintegrazione
+                        </p>
+                        <p>
+                            Saluti,<br />R3tr0R4k3
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div id="aboutSign" class="sign"><span>About Me</span></div>
+        <div id="aboutHole" class="hole"></div>
+
+        <!-- Stop Station 2 -->
+        <div id="servicesRoad" class="road side"></div>
+        <div id="servicesHouse" class="house">
+            <div class="door"></div>
+            <div class="lightbox">
+                <div class="inner services">
+                    <h2>Servizi e skill</h2>
+                    <section>
+                        <h3>Cose che faccio</h3>
+                        <div id="sCode" class="box clearfix">
+                            <div class="icon"></div>
+                            <h4>Programmazione:</h4>
+                            <p>Mi piace sviluppare script in java. Creare Database e gestirli. Ogni tanto mi dedico
+                                anche al penetration testing su HackTheBox</p>
+                        </div>
+
+                        <div id="sThinking" class="box clearfix">
+                            <div class="icon"></div>
+                            <h4>Lavoro:</h4>
+                            <p>Posso dare una mano con nuove idee e cercare di rendere realtà, l'idea che hai in mente
+                            </p>
+                        </div>
+                    </section>
+                    <section id="skillsList">
+                        <h3>Come?</h3>
+                        <ul>
+                            <li>HTML, CSS, JS</li>
+                            <li>NodeJS</li>
+                            <li>PHPmyadmin, MySQL</li>
+                            <li>PHP</li>
+                            <li>Java, JDBC</li>
+                            <li>Un po di C</li>
+                        </ul>
+                        <ul>
+                            <li>Ricerca</li>
+                            <li>Innovativo</li>
+                            <li>In cerca di nuove esperienze</li>
+                        </ul>
+                    </section>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div id="servicesSign" class="sign"><span>Services & Skills</span></div>
+        <div id="servicesHole" class="hole"></div>
+
+        <!-- Stop Station 3 -->
+        <div id="portfolioRoad" class="road side"></div>
+        <div id="portfolioHouse" class="house">
+            <div class="door"></div>
+            <div class="lightbox">
+                <div class="inner portfolio clearfix">
+                    <h2>Progetti</h2>
+                    <div class="portfolioBox">
+                        <div class="inner">
+                            <a class="portfolioImg" href="https://github.com/R3tr0R4ke/T3RRA3032" target="_blank">
+                                <img src="png/portfolio/terra3032/thumb.jpg" alt="Compare Ninja" />
+                            </a>
+                            <h4>Terra3032</h4>
+                            <p>Gioco testuale, basato su Java</p>
+                        </div>
+                    </div>
+                    <div class="shelf"></div>
+                    <div class="shelf bottom"></div>
+                </div>
+            </div>
+        </div>
+        <div id="portfolioSign" class="sign"><span>Progetti Recenti</span></div>
+        <div id="portfolioHole" class="hole"></div>
+
+        <!-- View -->
+        <div id="rightTrees" class="trees"></div>
+        <div id="leftGrass" class="grass"></div>
+
+        <!-- End Cave -->
+        <div id="endSea" class="sea"></div>
+        <div id="endBridge" class="bridge"></div>
+
+        <!-- <div id="endCaveHoleGlow"></div> -->
+        <div id="boat" class="isMoored">
+            <div class="meSail"></div>
+        </div>
+        <div id="contact">
+            <h1>Per contattarmi:</h1>
+            <div id="mysocial">
+                <a title="LinkedIn" href="https://www.linkedin.com/in/cesare-federico-sgaramella/" target="_blank"><img
+                        src="png/social/linkedin.png" alt="LinkedIn" /></a>
+                <a title="GitHub" href="https://github.com/R3tr0R4ke" target="_blank"><img
+                        style="background-color: white; border-radius: 50em;" src="png/social/github.png"
+                        alt="Github" /></a>
+                <a title="Instagram" href="https://www.instagram.com/fede_rake/" tagret="-blank"><img
+                        src="png/social/instagram.png" alt="Instagram" /></a>
+                <a title="Email" href="mailto:federico.sgaramella12@gmail.com"><img src="png/social/gmail.png"
+                        alt="Gmail" /></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Flowers -->
+    <div class="flowers r1"></div>
+    <div class="flowers r2"></div>
+    <div class="flowers r3"></div>
+    <div class="flowers r4"></div>
+    <div class="flowers r5"></div>
+    <div class="flowers r6"></div>
+    <div class="flowers r7"></div>
+    <div class="flowers r8"></div>
+    <div class="flowers r9"></div>
+    <div class="flowers r10"></div>
+    <div class="flowers r11"></div>
+    <div class="flowers r12"></div>
+
+    <div id="howToPlay">
+        <div class="lightbox">
+            <div class="inner howtoplay">
+                <h2>Come interagire?</h2>
+                <article>
+                    <div id="htpArrows" class="box clearfix">
+                        <div class="icon"></div>
+                        <p>Usa le frecce della tastiera per camminare (↑ ↓ → ←)</p>
+                    </div>
+                    <div id="htpHouses" class="box clearfix">
+                        <div class="icon"></div>
+                        <p>Entra negli edifici per avere informazioni su di me e dei miei progetti</p>
+                    </div>
+                    <div id="htpMouse" class="box clearfix">
+                        <div class="icon"></div>
+                        <p>Clickando ovunque sulla strada puoi teletrasportare il personaggio</p>
+                    </div>
+                    <div id="htpEsc" class="box clearfix">
+                        <div class="icon"></div>
+                        <p>Premi "Esc" per uscire dagli edifici / Chiudere la barra delle notifiche</p>
+                    </div>
+                    <div id="htpShare" class="box clearfix">
+                        <div class="icon"></div>
+                        <p>Puoi contattarmi a qualunque ora, cerco di rispondere il prima possibile</p>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
