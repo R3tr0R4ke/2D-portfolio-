@@ -42,7 +42,7 @@ blockquote:before,blockquote:after,q:before,q:after {content:'';content:none;}
 ins {text-decoration:none}
 del {text-decoration:line-through}
 table {}
-a focus {outline: 0;}
+a:focus{outline: 0;}
 ::selection {text-shadow: none; background: #909090; color: #fff;}
 .clear {margin: 0; padding: 0; clear: both; overflow: hidden; width: 0;}
 

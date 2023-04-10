@@ -640,7 +640,7 @@ nav li.last a:hover {
 	left: 50%;
 	height: 100%;
 	margin: 0 0 0 -106px;
-	background: url(images/fenceVer.png) repeat-y top;
+	background: url(png/verFence.png) repeat-y top;
 	position: absolute;
 }
 
@@ -650,7 +650,7 @@ nav li.last a:hover {
 	left: 50%;
 	height: 100%;
 	margin: 0 0 0 102px;
-	background: url(images/fenceVer.png) repeat-y top;
+	background: url(png/verFence.png) repeat-y top;
 	position: absolute;
 }
 
@@ -666,7 +666,7 @@ nav li.last a:hover {
 	top: -15px;
 	left: 0;
 	height: 15px;
-	background: url(images/fenceHor.png) repeat-x top;
+	background: url(png/orizFence.png) repeat-x top;
 	content: "";
 	position: absolute;
 }
@@ -676,7 +676,7 @@ nav li.last a:hover {
 	bottom: -15px;
 	left: 0;
 	height: 15px;
-	background: url(images/fenceHor.png) repeat-x top;
+	background: url(png/orizFence.png) repeat-x top;
 	content: "";
 	position: absolute;
 }
